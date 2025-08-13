@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: inline-block; /* Garante que o padding funcione corretamente */
+    padding: 10px 20px; /* Ajuste conforme necessário */
+    background-color: #f0f0f0; /* Cor de fundo */
+    border-radius: 8px; /* Arredondar cantos, se necessário */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), 
+                inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+    text-decoration: none; /* Remove o sublinhado */
+    color: #333; /* Cor do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    transition: all 0.2s ease-in-out; /* Suaviza animações */
+  }
+  
+  a:hover {
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.3), 
+                inset -4px -4px 10px rgba(255, 255, 255, 0.9);
+    background-color: #e0e0e0; /* Muda ligeiramente a cor ao passar o mouse */
+    color: #000; /* Escurece o texto */
+  }
+
+  
+fieldset {
+    width: 70%;
+    margin: 5px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+legend {
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.form-group label {
+    width: 25%;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 75%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-radio,
+.form-button {
+    width: 75%;
+}
+
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 15px;
+    margin-bottom: 7px;
+}
+
+.form-button {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-button input[type="submit"],
+.form-button input[type="reset"] {
+    width: 35%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.form-button input[type="submit"] {
+    background-color: #4caf50;
+}
+
+.form-button input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.form-button input[type="reset"] {
+    background-color: #f44336;
+}
+
+.form-button input[type="reset"]:hover {
+    background-color: #da190b;
+}
+
+/* modal */
+/* ...existing CSS code... */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.66);
+    z-index: 999;
+}
+
+.modal {
+    position: fixed;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    border-radius: 15px;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.close-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #45a049;
+}

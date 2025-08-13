@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EXEMPLO DE VALIDAÇÃO DE FORMULÁRIO COM JAVASCRIPT</title>
+	<link href="formulario.css" rel="stylesheet">
+</head>
+
+<body>
+	<form onsubmit="return validaForm(this);">
+		<fieldset>
+			<legend>Exemplo de validação de formulário com javascript</legend>
+			<div class="form-group">
+				<label for="nome">Nome:</label>
+				<input name="nome" type="text" size="40" placeholder="Digite seu nome">
+			</div>
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input name="email" type="email" size="40">
+			</div>
+			<div class="form-group">
+				<label for="data_nascimento">Data de Nascimento:</label>
+				<input type="date" name="data_nascimento" placeholder="Digite a data de Nascimento">
+			</div>
+			<div class="form-group">
+				<label for="endereco">Endereço:</label>
+				<input name="endereco" type="text" size="40" placeholder="Digite seu endereco">
+			</div>
+			<div class="form-group">
+				<label for="uf">UF:</label>
+				<select name="uf">
+					<option value="" disabled selected>Selecione...</option>
+					<option value="AC">Acre</option>
+					<option value="AL">Alagoas</option>
+					<option value="AP">Amapá</option>
+					<option value="AM">Amazonas</option>
+					<option value="BA">Bahia</option>
+					<option value="CE">Ceará</option>
+					<option value="DF">Distrito Federal</option>
+					<option value="ES">Espírito Santo</option>
+					<option value="GO">Goiás</option>
+					<option value="MA">Maranhão</option>
+					<option value="MT">Mato Grosso</option>
+					<option value="MS">Mato Grosso do Sul</option>
+					<option value="MG">Minas Gerais</option>
+					<option value="PA">Pará</option>
+					<option value="PB">Paraíba</option>
+					<option value="PR">Paraná</option>
+					<option value="PE">Pernambuco</option>
+					<option value="PI">Piauí</option>
+					<option value="RJ">Rio de Janeiro</option>
+					<option value="RN">Rio Grande do Norte</option>
+					<option value="RS">Rio Grande do Sul</option>
+					<option value="RO">Rondônia</option>
+					<option value="RR">Roraima</option>
+					<option value="SC">Santa Catarina</option>
+					<option value="SP">São Paulo</option>
+					<option value="SE">Sergipe</option>
+					<option value="TO">Tocantins</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="tel">Telefone:</label>
+				<input type="tel" name="tel" placeholder="Digite seu telefone">
+			</div>
+
+			<div class="form-group">
+				<label for="senha">Senha:</label>
+				<input type="password" name="senha" placeholder="Digite sua senha">
+			</div>
+			<div class="form-group">
+				<label for="conf_senha">Confirmar Senha:</label>
+				<input type="password" name="conf_senha" placeholder="Confirme sua senha">
+			</div>
+			<div class="form-group">
+				<label for="sexo">Sexo:</label>
+				<div class="form-radio">
+					<input type="radio" name="sexo" value="masc"> Masculino
+					<input type="radio" name="sexo" value="fem"> Feminino
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="interesses">Interesses:</label>
+				<div class="form-checkbox">
+					<input type="checkbox" name="interesses" value="esporte"> HTML
+					<input type="checkbox" name="interesses" value="musica"> Javscript
+					<input type="checkbox" name="interesses" value="cinema"> CSS
+					<input type="checkbox" name="interesses" value="tecnologia"> Gestão
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="mensagem">Fale de você:</label>
+				<textarea name="mensagem" cols="30" rows="5" placeholder="Fale sobre você"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="foto">Foto:</label>
+				<input type="file" name="foto" accept="image/*" size="200">
+			</div>
+			<div class="form-group">
+				<label for="site">Seu Linkdin:</label>
+				<input type="url" name="site" placeholder="https://www.linkedin.com/in/perfil/">
+			</div>
+			<div class="form-button">
+				<input type="submit" value="Enviar">
+				<input type="reset" value="Limpar">
+			</div>
+		</fieldset>
+	</form>
+
+	<div id="modal-overlay" class="modal-overlay" style="display: none;">
+		<div id="modal" class="modal">
+			<p id="modal-content" class="modal-content"></p>
+			<button id="close-button" class="close-button">Fechar</button>
+		</div>
+	</div>
+
+
+	<script src="formulario.js"></script>
+</body>
+
+</html>
