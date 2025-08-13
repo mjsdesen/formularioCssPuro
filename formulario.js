@@ -23,13 +23,14 @@ function validaForm(form) {
     form.email.focus();
     return false;
   }
-  var data_nascimento_regex = /^\d{2}\/\d{2}\/\d{4}$/;
+  /* valida data nascimento */
   if (
-    form.data_nascimento.value == "" ||
-    !data_nascimento_regex.test(form.data_nascimento.value)
+    !form.data_nascimento ||
+    typeof form.data_nascimento.value === "undefined" ||
+    form.data_nascimento.value == ""
   ) {
     showModal("Por favor, insira a data de nascimento no formato DD/MM/AAAA.");
-    form.data_nascimento.focus();
+    if (form.data_nascimento && typeof form.data_nascimento.focus === "function") form.data_nascimento.focus();
     return false;
   }
   if (form.endereco.value == "" || form.endereco.value.length < 8) {
